@@ -1,0 +1,38 @@
+
+
+@mixin boton_redondo {
+    padding: 1em;
+    &:hover{
+        background-color: $color_base;
+    }
+}
+
+
+@mixin boton_cuadrado {
+    padding: 1em;
+    margin-right: 1em;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+    &:hover{
+        background-color: $color_base;
+    }
+    &:active{
+        background-color: red;
+    }
+    
+}
+
+@mixin boton_nav {
+    padding: 1em;
+    margin-bottom: 1em;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    &:hover{
+        background-color: $color_base;
+    }
+    width: fit-content;
+    
+}

@@ -1,0 +1,205 @@
+@import 'mixins';
+@import 'vars';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-weight: regular;
+  text-transform: uppercase;
+  color: $color_contraste;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+/* * {
+  border: 1px solid red;
+} */
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.panel_filtros {
+  display: flex;
+  height: 90vh;
+}
+
+//////////////////////////////
+//////////////////////////////
+////////////CANVAS////////////
+//////////////////////////////
+
+canvas {
+  background-color: rgb(146, 146, 146);
+}
+
+#caja_input {
+  background-color: rgb(116, 116, 116);
+  display: flex;
+  margin: 0;
+}
+
+//////////////////////////////
+//////////////////////////////
+/////MENÚ IZQUIERDO/////
+//////////////////////////////
+//////////////////////////////
+
+
+.menu {
+  background-color: $color_base;
+  display: flex;
+  padding: 2em 1em 1em 2em;
+  flex-flow: column;
+  width: fit-content;
+}
+
+.header {
+  font-size: 1.7em;
+  margin-bottom: 1em;
+}
+
+#caja_input {
+  margin-bottom: 1em;
+  padding: 0;
+  height: fit-content;
+  background-color: white;
+  border: 0 none;
+
+  &:focus {
+    border: 0 none;
+    background-color: rgb(255, 255, 144);
+  }
+
+
+}
+
+/////////////FILTROS///////////////
+//////////////////////////////////
+
+.selector_filtro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+
+#filtro_A {
+  @include boton_nav;
+  background-color: red;
+}
+
+#filtro_B {
+  @include boton_nav;
+  background-color: rgb(0, 234, 255);
+}
+
+#filtro_C {
+  @include boton_nav;
+  background-color: rgb(255, 196, 0);
+}
+
+.info {
+  @include boton_nav;
+  background-color: rgb(114, 114, 114);
+}
+
+
+//////////////////////////////
+//////////////////////////////
+/////TOOLS MENÚ INFERIOR//////
+//////////////////////////////
+//////////////////////////////
+
+.tools {
+  background-color: $color_base;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em 2em 2em;
+  font-size: 0.8em;
+  height: 10vh;
+}
+
+/////////////TOOLS_TIPO///////////////
+
+.tools_tipo {
+  display: flex;
+}
+
+#tools_t_selector {
+  @include boton_cuadrado;
+  background-color: blue;
+  display: flex;
+}
+
+#tools_t_tamano {
+  @include boton_cuadrado;
+  background-color: blue;
+}
+
+#tools_t_peso {
+  @include boton_cuadrado;
+  background-color: blue;
+}
+
+
+/////////////TOOLS_FILTROS///////////////
+/////////////////////////////////////////
+
+.tools_filtros {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#tools_f_densidad {
+  @include boton_cuadrado;
+  background-color: rgb(255, 106, 0);
+  display: flex;
+
+}
+
+#tools_f_backg {
+  @include boton_cuadrado;
+  background-color: rgb(255, 106, 0);
+
+}
+
+#tools_f_colors {
+  @include boton_cuadrado;
+  background-color: rgb(255, 106, 0);
+
+}
+
+
+///////////////DECARGAS/////////////////
+/////////////////////////////////////////
+.caja_descarga {
+  background-color: rgb(61, 168, 61);
+  display: flex;
+  justify-content: space-between;
+}
+
+#descarga_png {
+  @include boton_redondo;
+}
+
+#descarga_jpeg {
+  @include boton_redondo;
+}
+
+#descarga_svg {
+  @include boton_redondo;
+}
